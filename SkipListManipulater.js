@@ -1,8 +1,5 @@
 // https://cmps-people.ok.ubc.ca/ylucet/DS/SkipList.html
 
-let maxValue = 100;
-let step = 10; // distance between nodes we initially put in the skip list
-let amountOfRandomValues = 20;
 let valueSet = null; // is used to determine if we should increase the canvas width
 
 const header = document.querySelector("#header");
@@ -155,6 +152,9 @@ const getArrayOfRandomValuesInRange = (maxValue, amountOfValues) => {
 };
 
 const main = () => {
+  let maxValue = 100;
+  let step = 10; // distance between nodes we initially put in the skip list
+  let amountOfRandomValues = 20;
   valueSet = valueSet == null ? new Set() : valueSet;
   resetCanvasWidth();
   let InitialList = getArrayWithInitialRangeValues(maxValue, step);
