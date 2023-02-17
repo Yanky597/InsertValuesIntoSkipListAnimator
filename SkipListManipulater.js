@@ -76,6 +76,9 @@ const insertValuesIntoSkipList = (arr, numSet) => {
     the skip list. The current value being inserted is highlighted in red
 */
 const displayCurrentValue = (val) => {
+  let openingTag = `<span style="color:red;font-weight: bold; font-size:large;">`;
+  let closingTag = `</span>`;
+  let comma = `<span>, </span>`;
   try {
     let previousValues = document.querySelectorAll("#header>div>span");
     for (let i = 0; i < previousValues.length; i++) {
@@ -88,16 +91,10 @@ const displayCurrentValue = (val) => {
         Creates a div in the header that will display the values
         we are inserting into the skip list.
       */
-      currentDiv.innerHTML +=
-        '<span style="color:red;font-weight: bold; font-size:large;">' +
-        val +
-        "</span>";
+      currentDiv.innerHTML += openingTag + val + closingTag;
       return;
     }
-    currentDiv.innerHTML +=
-      '<span style="color:red;font-weight: bold; font-size:large;">, ' +
-      val +
-      "</span>";
+    currentDiv.innerHTML += comma + " " + openingTag + val + closingTag;
   } catch (error) {
     console.log(error);
   }
@@ -158,7 +155,7 @@ const getArrayOfRandomValuesInRange = (maxValue, amountOfValues) => {
 };
 
 const main = () => {
-  valueSet = valueSet == null ? new Set() : valueSet
+  valueSet = valueSet == null ? new Set() : valueSet;
   resetCanvasWidth();
   let InitialList = getArrayWithInitialRangeValues(maxValue, step);
   insertValuesIntoSkipList(InitialList, valueSet);
