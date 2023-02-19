@@ -91,7 +91,7 @@ const displayCurrentValue = (val) => {
       currentDiv.innerHTML += openingTag + val + closingTag;
       return;
     }
-    currentDiv.innerHTML += comma + " " + openingTag + val + closingTag;
+    currentDiv.innerHTML += comma + openingTag + val + closingTag;
   } catch (error) {
     console.log(error);
   }
