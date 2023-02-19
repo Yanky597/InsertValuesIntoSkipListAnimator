@@ -78,11 +78,7 @@ const displayCurrentValue = (val) => {
   let comma = `<span>, </span>`;
   try {
     let previousValues = document.querySelectorAll("#header>div>span");
-    for (let i = 0; i < previousValues.length; i++) {
-      previousValues[i].style.color = "inherit";
-      previousValues[i].style.fontWeight = "normal";
-      previousValues[i].style.fontSize = "medium";
-    }
+    
     if (document.querySelectorAll("#header>div>span").length < 1) {
       /*
         Creates a div in the header that will display the values
@@ -91,6 +87,9 @@ const displayCurrentValue = (val) => {
       currentDiv.innerHTML += openingTag + val + closingTag;
       return;
     }
+    previousValues[previousValues.length-1].style.color = "inherit";
+    previousValues[previousValues.length-1].style.fontWeight = "normal";
+    previousValues[previousValues.length-1].style.fontSize = "medium";
     currentDiv.innerHTML += comma + openingTag + val + closingTag;
   } catch (error) {
     console.log(error);
