@@ -105,7 +105,7 @@ const displayCurrentValue = (val) => {
 */
 
 const updateCanvasSize = (currentValue, numSet) => {
-  if (numSet.size > 13 && !numSet.has(currentValue)) {
+  if (numSet.size > 12 && !numSet.has(currentValue)) {
     canvasWidth.value = (parseInt(canvasWidth.value) + 100).toString();
     canvasHeight.value = (parseInt(canvasHeight.value) + 5).toString();
   } else if (!numSet.has(currentValue)) {
@@ -151,7 +151,7 @@ const getArrayOfRandomValuesInRange = (maxValue, amountOfValues) => {
   return arr;
 };
 
-const main = () => {
+let main = () => {
   let maxValue = 100;
   let step = 10; // distance between nodes we initially put in the skip list
   let amountOfRandomValues = 20;
