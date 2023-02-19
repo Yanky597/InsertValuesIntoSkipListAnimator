@@ -1,5 +1,1 @@
-# Insert values into Skip List Animator
-
-Automate the insertion of values into the Skip list animator found [here](https://cmps-people.ok.ubc.ca/ylucet/DS/SkipList.html).
-
----
+This script allows you to automate the insertion of values into the Skip list animator found [here](https://cmps-people.ok.ubc.ca/ylucet/DS/SkipList.html).
